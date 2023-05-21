@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-video">
+        <video autoplay loop>
+            <source src="images/autumn.mp4">
+        </video>
+    </div>
+    <div class="container">
+        <div class="audio">
+            <audio >
+                <source src="images/067.mp3">
+            </audio>
+            <div class="pause">
+                <img src="images/pause-button.png" alt="pause-button">
+            </div>
+            <div class="square">
+                <svg>
+                    <rect class="rect1" stroke-width="10" rx="8" height="150" width="150" y="25" x="25" stroke="#F07281" fill="transparent"/>
+                </svg>
+                <svg>
+                    <rect class="rect" stroke-width="10" rx="8" height="150" width="150" y="25" x="25" stroke="#FFFFFF" fill="transparent"></rect>
+                </svg>
+                <div class="time">
+                    <span>00:00</span>
+                </div>
+            </div>
+            <div class="play">
+                <img src="images/play-button.png" alt="play-button">
+            </div>
+        </div>
+        <div class="clock-times">
+            <div class="image-clock" duration-time = 120>
+                <img src="images/2min.png" alt="2min">
+                <p>2 Min</p>
+            </div>
+            <div class="image-clock" duration-time = 300>
+                <img src="images/5min.png" alt="5min">
+                <p>5 Min</p>
+            </div>
+            <div class="image-clock" duration-time = 600>
+                <img src="images/10min.png" alt="10min">
+                <p>10 Min</p>
+            </div>
+            <div class="image-clock" duration-time = 1200>
+                <img src="images/20min.png" alt="20min">
+                <p>20 Min</p>
+            </div>
+        </div>
+        <div class="seasons">
+            <div class="image-seasons" video-src = "images/autumn.mp4">
+                <img src="images/autumn.png" alt="autumn">
+            </div>
+            <div class="image-seasons" video-src = "images/spring.mp4">
+                <img src="images/spring.png" alt="spring">
+            </div>
+            <div class="image-seasons" video-src = "images/summer.mp4">
+                <img src="images/summer.png" alt="summer">
+            </div>
+            <div class="image-seasons" video-src = "images/">
+                <img src="images/winter.png" alt="winter">
+            </div>
+            <div class="arrow-right">
+                <img src="images/right-arrow.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="toggleMenu.js"></script>
+    <!--<script src="mouseMoved.js"></script-->
+        <script src="playAudio.js"></script>
+</body>
+</html>

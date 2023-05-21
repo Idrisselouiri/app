@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+/*container-video*/
+.container-video{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.container-video video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+    min-height: 100%;
+}
+/*container*/
+.container {
+    display: grid;
+    grid-template-areas: 
+    "a a a a s s"
+    "a a a a s s"
+    "t t t t s s "
+    "t t t t s s"  
+    ;
+    height: 100vh;
+    width: 100vw;
+}
+.inmovid{
+    opacity: 0;
+}
+.audio{
+    grid-area: a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.audio img{
+    width: 75px;
+}
+.audio .square{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 40px;
+}
+.audio .square svg{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    transform: rotate(45deg);
+}
+.audio .square .time{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clock-times{
+    grid-area: t;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20%;
+    text-align: center;
+}
+.clock-times .image-clock p{
+    padding-top: 5px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 15px #222;
+}
+.clock-times img{
+    width: 75px;
+    filter: drop-shadow(0px 0px 15px #222);
+}
+.seasons{
+    grid-area: s;
+    opacity: .8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25% 0;
+}
+
+.seasons img{
+    width: 75px;
+}
+.seasons .arrow-right img{
+    display: none;
+}
+/*media*/
+@media screen and (max-width : 600px) {
+    .container-video video{
+        height: 100%;
+    }
+    .container {
+        display: grid;
+        grid-template-areas: 
+        "a "
+        "a"
+        "t"
+        "t"  
+        ;
+    }
+    .audio img{
+        width: 40px;
+    }
+    .audio .square{
+        width: 175px;
+        height: 175px;
+        margin: 0 20px;
+    }
+    .audio .square svg{
+        width: 175px;
+        height: 175px;
+    }
+    .audio .square svg .rect1, 
+    .rect
+    {
+        width: 125px;
+        height: 125px;
+    }
+    .audio .square .time{     
+        font-size: 1.6rem;
+    }
+    .clock-times{
+        padding: 0 10%;
+    }
+    .clock-times .image-clock p{
+        font-size: 1rem;
+    }
+    .clock-times img{
+        width: 50px;
+    }
+    .seasons{
+        background-color: rgba(255, 255, 255, 0.808);
+        opacity: .8;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: -90%;
+        width: 100%;
+        transition: open ease-in-out 500ms;
+    }
+    .open{
+        left: 0%;
+    }
+    .seasons img{
+        width: 40px;
+    }
+    .seasons .arrow-right img{
+        width: 20px;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        transition: open ease-in-out 500ms;
+    }
+    .rotate{
+        transform: rotate(180deg);
+    }
+}
