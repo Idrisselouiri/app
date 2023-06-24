@@ -13,7 +13,7 @@ function deactiveCn(){
     let nowDate = new Date() ;
     let operatorTime = nowDate - lastTimeMouseMoved ;
     if( operatorTime >= LimitedTime){
-        container.classList.remove("Concealment")
+        container.classList.add("Concealment")
     }
 
     requestAnimationFrame(deactiveCn)
