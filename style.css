@@ -34,6 +34,10 @@ body{
     ;
     height: 100vh;
     width: 100vw;
+    transition: opacity 2s ease-in-out;
+}
+.Concealment{
+    opacity: 0;
 }
 .inmovid{
     opacity: 0;
@@ -112,7 +116,7 @@ body{
     .container {
         display: grid;
         grid-template-areas: 
-        "a "
+        "a"
         "a"
         "t"
         "t"  
@@ -160,7 +164,7 @@ body{
         width: 100%;
         transition: open ease-in-out 500ms;
     }
-    .open{
+    .show-menu{
         left: 0%;
     }
     .seasons img{
@@ -173,9 +177,10 @@ body{
         top: 50%;
         transform: translateY(-50%);
         display: block;
-        transition: open ease-in-out 500ms;
+        transition: ease-in-out 500ms;
     }
     .rotate{
         transform: rotate(180deg);
     }
+
 }
